@@ -1,12 +1,12 @@
 import { StrictMode, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SearchParams from "./SearchParams";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
+import Header from './Header';
 
 const App = () => {
   const theme = useState("darkblue");
@@ -14,10 +14,8 @@ const App = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <div>
-        <Router>
-          <header>
-            <Link to="/">Hey Adopt</Link>
-          </header>
+        <Router>  
+          <Header />
           <Switch>
             <Route path="/details/:id">
               <Details />
