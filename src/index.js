@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 import Header from './Header';
+import Footer from './Footer';
 
 const App = () => {
   const theme = useState("darkblue");
@@ -24,6 +25,7 @@ const App = () => {
               <SearchParams />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </div>
     </ThemeContext.Provider>
