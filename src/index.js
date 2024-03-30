@@ -8,6 +8,7 @@ import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 import Header from './Header';
 import Footer from './Footer';
+// import Breadcrumbs from './Breadcrumbs';
 
 const App = () => {
   const theme = useState("darkblue");
@@ -17,6 +18,7 @@ const App = () => {
       <div>
         <Router>  
           <Header />
+          {/* <Breadcrumbs /> */}
           <Switch>
             <Route path="/details/:id">
               <Details />

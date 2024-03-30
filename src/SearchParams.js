@@ -9,14 +9,17 @@ const SearchParams = () => {
   const [animal, updateAnimal] = useState("");
   const [location, updateLocation] = useState("");
   const [breed, updateBreed] = useState("");
-  const [pets, setPets] = useState([]);
+  const [pets, setPets] = useState(() => {
+    const storedPets = localStorage.getItem("storedPets");
+    return storedPets ? JSON.parse(storedPets) : [];
+  });
   
   const [breeds] = useBreedList(animal);
   const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
-    requestPets();
-  }, []);    // eslint-disable-line react-hooks/exhaustive-deps
+    localStorage.setItem("storedPets", JSON.stringify(pets));
+  }, [pets]);
 
   async function requestPets() {
     const res = await fetch(
@@ -98,7 +101,7 @@ const SearchParams = () => {
       </form>
 
       <Results pets={pets} />      {/*  pets is array consist of object pets */}
-
+      
     </div>
   );
 };

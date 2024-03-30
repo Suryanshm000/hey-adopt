@@ -129,7 +129,7 @@ header {
   margin-top: 8px;
 }
 
-.carousel > img {
+.carousel>img {
   max-width: 45%;
   max-height: 400px;
 }
@@ -138,7 +138,7 @@ header {
   width: 50%;
 }
 
-.carousel-smaller > img {
+.carousel-smaller>img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -148,11 +148,11 @@ header {
   border: 2px solid #333;
 }
 
-.carousel-smaller > img:hover{
+.carousel-smaller>img:hover {
   opacity: 0.7;
 }
 
-.carousel-smaller > img.active {
+.carousel-smaller>img.active {
   border-color: #ad343e;
   opacity: 0.6;
 }
@@ -213,7 +213,7 @@ header {
   display: none;
 }
 
-#modal > div {
+#modal>div {
   background-color: white;
   max-width: 500px;
   padding: 15px;
@@ -226,9 +226,9 @@ header {
   margin-right: 15px;
 }
 
- /* ----------------- header -------------- */
+/* ----------------- header -------------- */
 
- header {
+header {
   display: block;
   top: 0;
   left: 0;
@@ -256,10 +256,10 @@ header {
     text-align: center;
     font-size: 35px;
     font-weight: 500;
-    text-shadow:1px 1px rgb(104, 101, 101);
+    text-shadow: 1px 1px rgb(104, 101, 101);
   }
 
-nav {
+  nav {
     display: none;
 
     a {
@@ -280,7 +280,7 @@ nav {
     @media screen and (min-width: 800px) {
       display: block;
     }
-}
+  }
 
   .burger {
     display: block;
@@ -322,11 +322,39 @@ nav {
 }
 
 
+/* ------------- breadcrums ---------- */
+
+/* .breadcrumbs {
+  max-width: 1200px;
+  margin: 20px auto;
+  margin-left: 85px;
+}
+
+.breadcrumbs> *{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.breadcrumbs .crumb:after {
+  content: '>';
+  margin-left: 10px;
+}
+
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+
+.breadcrumbs .crumb a {
+  color: #171616;
+  font-weight: 600;
+} */
+
+
 /* ------------ footer ----------- */
 
-.my-gradient{
-  margin-top:-50px;
-} 
+.my-gradient {
+  margin-top: -50px;
+}
 
 .footer-basic {
   padding: 10px;
@@ -387,7 +415,7 @@ nav {
 }
 
 
-.load{
+.load {
   text-align: center;
   font-size: 40px;
   opacity: 0.7;
@@ -462,7 +490,8 @@ nav {
     margin: 0 auto;
     float: none;
   }
-  .carousel-smaller > img {
+
+  .carousel-smaller>img {
     width: 60px;
     height: 60px;
   }
