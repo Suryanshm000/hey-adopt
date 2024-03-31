@@ -9,17 +9,14 @@ const SearchParams = () => {
   const [animal, updateAnimal] = useState("");
   const [location, updateLocation] = useState("");
   const [breed, updateBreed] = useState("");
-  const [pets, setPets] = useState(() => {
-    const storedPets = localStorage.getItem("storedPets");
-    return storedPets ? JSON.parse(storedPets) : [];
-  });
+  const [pets, setPets] = useState([]);
   
   const [breeds] = useBreedList(animal);
   const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
-    localStorage.setItem("storedPets", JSON.stringify(pets));
-  }, [pets]);
+    requestPets();
+  }, []);
 
   async function requestPets() {
     const res = await fetch(
